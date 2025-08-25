@@ -8,12 +8,12 @@ ENV VERSION=1.1.1
 ENV CONDA\_DIR=/home/epi2meuser/miniconda
 ENV PATH=$CONDA\_DIR/bin:$PATH
 
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86\_64.sh -O /tmp/miniconda.sh && 
-    bash /tmp/miniconda.sh -b -p $CONDA\_DIR && 
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86\_64.sh -O /tmp/miniconda.sh && \
+    bash /tmp/miniconda.sh -b -p $CONDA\_DIR && \
     rm /tmp/miniconda.sh
 
 # Accept Conda Terms of Service automatically for main channels
-RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && 
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
 # Install curl via conda
