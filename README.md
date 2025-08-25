@@ -39,3 +39,4 @@ Of course, you can also switch to another base image and build more complex cont
 **Make sure that `ENV VERSION` is set. It's needed to create the tag for the docker image.**
 
 A payed GitHub account would even allow to remove Step 1. 
+
