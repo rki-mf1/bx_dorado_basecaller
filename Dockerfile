@@ -16,9 +16,8 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86\_64.sh 
 RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
-ENV PATH=$CONDA\_DIR/bin:$PATH
-
 # Install curl via conda
 RUN conda install -y curl && conda clean -a
 
 
+RUN conda init
