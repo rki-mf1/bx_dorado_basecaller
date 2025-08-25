@@ -5,7 +5,4 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV VERSION=1.1.1
 
 # Install curl
-RUN apt update --allow-releaseinfo-change && \
-    apt install -y curl && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN conda install -y -c conda-forge curl && conda clean -a
